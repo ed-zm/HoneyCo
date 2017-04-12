@@ -4,21 +4,21 @@
  *
  */
 
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import Slider from 'react-slick';
-import { Card, CardBlock, CardFooter, CardImg, CardImgOverlay, CardSubtitle, CardTitle } from 'reactstrap';
-import Masonry from 'react-masonry-component';
-import 'slick-carousel/slick/slick.scss';
-import 'slick-carousel/slick/slick-theme.scss';
-import { createStructuredSelector } from 'reselect';
-import makeSelectBlogList from './selectors';
+import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import Slider from 'react-slick'
+import { Card, CardBlock, CardFooter, CardImg, CardImgOverlay, CardSubtitle, CardTitle } from 'reactstrap'
+import Masonry from 'react-masonry-component'
+import 'slick-carousel/slick/slick.scss'
+import 'slick-carousel/slick/slick-theme.scss'
+import { createStructuredSelector } from 'reselect'
+import makeSelectBlogList from './selectors'
 
-import { getBlogList } from './actions';
-import ColoredContainer from '../../components/ColoredContainer/index';
-import { HoneyCoDarkGray, HoneyCoLightGray } from '../../constants';
+import { getBlogList } from './actions'
+import ColoredContainer from '../../components/ColoredContainer/index'
+import { HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
 
 const StyledSlider = styled(Slider)`
   .slick-next {
@@ -39,26 +39,25 @@ const StyledSlider = styled(Slider)`
   .slick-dots {
     position: initial;
   }
-`;
+`
 
 const BottomCardImgOverlay = styled(CardImgOverlay)`
   top: initial;
   color: white;
   text-weight: 700;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-`;
+`
 
 const FilteredImage = styled(CardImg)`
   
-`;
+`
 
 export class BlogList extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
-  componentDidMount() {
-    this.props.dispatch(getBlogList());
+  componentDidMount () {
+    this.props.dispatch(getBlogList())
   }
 
-  render() {
+  render () {
     return (
       <div>
         <Helmet
@@ -173,22 +172,22 @@ export class BlogList extends React.Component { // eslint-disable-line react/pre
           </Masonry>
         </ColoredContainer>
       </div>
-    );
+    )
   }
 }
 
 BlogList.propTypes = {
   dispatch: PropTypes.func.isRequired,
-};
+}
 
 const mapStateToProps = createStructuredSelector({
   BlogList: makeSelectBlogList(),
-});
+})
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     dispatch,
-  };
+  }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BlogList);
+export default connect(mapStateToProps, mapDispatchToProps)(BlogList)

@@ -3,9 +3,9 @@
  * HoneyCoDivider
  *
  */
-import React from 'react';
-import styled from 'styled-components';
-import HoneyCoLogomark from './static/logomark-plain@0.5x.png';
+import React from 'react'
+import styled from 'styled-components'
+import HoneyCoLogomark from './static/logomark-plain@0.5x.png'
 
 const HoneyCoDivider = styled.hr`
   border-top: 1px solid ${(props) => props.color};
@@ -26,11 +26,11 @@ const HoneyCoDivider = styled.hr`
     top: -15px;
     
   }
-`;
+`
 
 HoneyCoDivider.propTypes = {
   backgroundColor: React.PropTypes.string.isRequired,
   color: React.PropTypes.string.isRequired,
-};
+}
 
-export default HoneyCoDivider;
+export default HoneyCoDivider

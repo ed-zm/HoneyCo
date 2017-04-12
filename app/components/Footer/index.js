@@ -4,15 +4,15 @@
  *
  */
 
-import React from 'react';
-import FontAwesome from 'react-fontawesome';
-import { Col, Row } from 'reactstrap';
-import styled from 'styled-components';
+import React from 'react'
+import FontAwesome from 'react-fontawesome'
+import { Col, Row } from 'reactstrap'
+import styled from 'styled-components'
 
-import { HoneyCoDarkBlue, HoneyCoDarkGray, HoneyCoLightGray } from '../../constants';
-import AppStoreBadge from './static/apple-app-store-badge.svg';
-import PlayStoreBadge from './static/google-play-store-badge.svg';
-import ColoredContainer from '../ColoredContainer/index';
+import { HoneyCoDarkBlue, HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
+import AppStoreBadge from './static/apple-app-store-badge.svg'
+import PlayStoreBadge from './static/google-play-store-badge.svg'
+import ColoredContainer from '../ColoredContainer/index'
 
 const CopyrightRow = styled(Row)`
   background: ${HoneyCoLightGray};
@@ -20,7 +20,7 @@ const CopyrightRow = styled(Row)`
   text-align: center;
   color: ${HoneyCoDarkGray};
   font-size: 1rem;
-`;
+`
 
 const FooterList = styled.ul`
   list-style: none;
@@ -38,10 +38,10 @@ const FooterList = styled.ul`
     text-align: center
   }
   
-`;
+`
 
 class Footer extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  render() {
+  render () {
     return (
       <ColoredContainer backgroundColor="white" textColor={HoneyCoDarkGray} divider={false}>
         <Row>
@@ -89,10 +89,10 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
           </Col>
         </CopyrightRow>
       </ColoredContainer>
-    );
+    )
   }
 }
 
-Footer.propTypes = {};
+Footer.propTypes = {}
 
-export default Footer;
+export default Footer

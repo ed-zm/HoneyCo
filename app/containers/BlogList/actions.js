@@ -4,10 +4,10 @@
  *
  */
 
-import { BLOG_LIST_FETCH_REQUESTED } from './constants';
+import { BLOG_LIST_FETCH_REQUESTED } from './constants'
 
-export function getBlogList() {
+export function getBlogList () {
   return {
     type: BLOG_LIST_FETCH_REQUESTED,
-  };
+  }
 }

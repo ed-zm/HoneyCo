@@ -11,27 +11,24 @@
  * the linting exception.
  */
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.min.css';
-import React from 'react';
-import TopMenu from '../../components/TopMenu/index';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'font-awesome/css/font-awesome.min.css'
+import React from 'react'
+import TopMenu from '../../components/TopMenu/index'
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-
   static propTypes = {
     children: React.PropTypes.node,
-  };
-
+  }
   static defaultProps = {
     children: [],
-  };
-
-  render() {
+  }
+  render () {
     return (
       <div>
         <TopMenu />
         {React.Children.toArray(this.props.children)}
       </div>
-    );
+    )
   }
 }

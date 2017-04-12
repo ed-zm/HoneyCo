@@ -1,14 +1,13 @@
-import { createSelector } from 'reselect';
+import { createSelector } from 'reselect'
 
 /**
  * Direct selector to the blogPost state domain
  */
-const selectBlogPostDomain = () => (state) => state.get('blogPost');
+const selectBlogPostDomain = () => (state) => state.get('blogPost')
 
 /**
  * Other specific selectors
  */
-
 
 /**
  * Default selector used by BlogPost
@@ -17,9 +16,9 @@ const selectBlogPostDomain = () => (state) => state.get('blogPost');
 const makeSelectBlogPost = () => createSelector(
   selectBlogPostDomain(),
   (substate) => substate.toJS(),
-);
+)
 
-export default makeSelectBlogPost;
+export default makeSelectBlogPost
 export {
   selectBlogPostDomain,
-};
+}

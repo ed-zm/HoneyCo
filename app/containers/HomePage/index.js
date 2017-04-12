@@ -9,46 +9,51 @@
  * the linting exception.
  */
 
-import React from 'react';
-import { Button, Col, Row } from 'reactstrap';
-import styled from 'styled-components';
-import ColoredContainer from '../../components/ColoredContainer/index';
-import Footer from '../../components/Footer/index';
-import MobileConvertibleTabWindow from '../../components/MobileConvertibleTabWindow/index';
-import { HoneyCoBlue, HoneyCoDarkGray, HoneyCoLightGray, HoneyCoRed, HoneyCoYellow } from '../../constants';
+import React from 'react'
+import { Button, Col, Row } from 'reactstrap'
+import styled from 'styled-components'
+import MobileSolutions from '../../components/MobileSolutions/index.js'
+import SmartHome from '../../components/SmartHome/index.js'
+import ColoredContainer from '../../components/ColoredContainer/index'
+import Footer from '../../components/Footer/index'
+import { HoneyCoBlue, HoneyCoBlueRGBA, HoneyCoDarkGray, HoneyCoLightGray, HoneyCoRed, HoneyCoYellow } from '../../constants'
 
-import JoelJumbotronImage from './static/home-jumbotron.jpg';
-import FirstTabImage from './static/home-tab1-image.png';
+import JoelJumbotronImage from './static/home.jpg'
+import FirstTabImage from './static/home-tab1-image.png'
 // import SecondTabImage from './static/home-tab2-image.jpg';
-import ThirdTabImage from './static/home-tab3-image.png';
-import SecondSectionImage from './static/home-section2-image.png';
-
-import FeaturedCNET from './static/featured/cnet.png';
-import FeaturedAdamCarolla from './static/featured/adam-carolla-show.png';
-import FeaturedCrains from './static/featured/crains.png';
-import FeaturedNashvilleBusinessJournal from './static/featured/nashville-business-journal.svg';
-import FeaturedStandingWithHope from './static/featured/standing-with-hope.jpg';
-import FeaturedTechCo from './static/featured/tech-co.png';
-import FeaturedWGNRadio from './static/featured/wgn-radio.png';
-import FeaturedBusinessNewsDaily from './static/featured/business-news-daily.svg';
-
+import ThirdTabImage from './static/home-tab3-image.png'
+import SecondSectionImage from './static/home-section2-image.png'
+import FeaturedCNET from './static/featured/cnet.png'
+import FeaturedAdamCarolla from './static/featured/adam-carolla-show.png'
+import FeaturedCrains from './static/featured/crains.png'
+import FeaturedNashvilleBusinessJournal from './static/featured/nashville-business-journal.svg'
+import FeaturedStandingWithHope from './static/featured/standing-with-hope.jpg'
+import FeaturedTechCo from './static/featured/tech-co.png'
+import FeaturedWGNRadio from './static/featured/wgn-radio.png'
+import FeaturedBusinessNewsDaily from './static/featured/business-news-daily.svg'
 
 const StyledJumbotron = styled.div`
   background-image: url(${JoelJumbotronImage});
-  background-size: contain;
+  background-size: auto;
+  background-position: center;
   background-repeat: no-repeat;
+  bakground-color: ${HoneyCoBlueRGBA(0.5)};
   width: 100%;
-  height: 0;
-  padding-top: 49.08%; /* (img-height / img-width * 100) */
+  height: 650px;
   position: relative;
-`;
+`
+const StyledJumbotronTransparency = styled.div`
+  background-color: rgba(77, 162, 159, 0.6);
+  width: 100%;
+  height: 650px;
+  position: relative;
+`
 
 const JumbotronContainer = styled.div`
   position: absolute;
   padding: 1rem;
   color: white;
   text-weight: 700;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   
   // MAKE CHANGES BELOW TO PUT TEXT/BUTTONS ON TOP OF THE JUMBOTRON
   top: 0;
@@ -79,12 +84,41 @@ const JumbotronContainer = styled.div`
     }
   }
   @media (min-width: 1200px) {
-    top: 80px;
-    left: 200px;
+    top: calc(50% - 230.5px);
+    left: calc(50% - 307px);
     h1 {
       font-size: 4rem;
     }
-`;
+`
+
+const StyledTextJumbotron = styled.span`
+  display: block;
+  font-size: 80px;
+  font-weight: 500;
+  text-align: center;
+`
+const StyledSubTextJumbotron = styled.span`
+  display: block;
+  font-size: 32px;
+  margin: 32px auto;
+  text-align: center;
+`
+
+const StyledButtonJumbotron = styled.button`
+  font-family: Oswald;
+  font-size: 32px;
+  background-color: ${HoneyCoYellow};
+  padding: .2em;
+  border-radius: 5px;
+  border: none;
+  padding: .3em 1.5em;
+  text-align: center;
+  margin-top: 10px;
+`
+
+const StyledButtonJumbotronContainer = styled.div`
+  text-align: center;
+`
 
 const TabTextContentDiv = styled.div`
 
@@ -95,7 +129,7 @@ margin: 0px;
   color: ${HoneyCoDarkGray};
   margin: 15px;
 }
-`;
+`
 
 const FeaturedCards = styled.div`
   display: flex;
@@ -103,7 +137,7 @@ const FeaturedCards = styled.div`
   align-items: center;
   justify-content: space-around;
   padding-bottom: 40px;
-`;
+`
 
 const FeaturedCardWrapper = styled.div`
   margin: 20px 10px;
@@ -112,78 +146,30 @@ const FeaturedCardWrapper = styled.div`
     filter: grayscale(100%);
     opacity: 0.7;
   }
-`;
-
+`
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  render() {
+  render () {
     return (
       <div>
         <StyledJumbotron src={JoelJumbotronImage}>
-          <JumbotronContainer w="topLeft">
-            <h1>I&apos;ve got it <br />
-              handled</h1>
-          </JumbotronContainer>
+          <StyledJumbotronTransparency>
+            <JumbotronContainer w="topLeft">
+              <StyledTextJumbotron>A smart decision for</StyledTextJumbotron>
+              <StyledTextJumbotron>independent living</StyledTextJumbotron>
+              <StyledSubTextJumbotron>Shaping the future of unRetirement</StyledSubTextJumbotron>
+              <StyledButtonJumbotronContainer>
+                <StyledButtonJumbotron>
+                  Meet HoneyCo
+                </StyledButtonJumbotron>
+              </StyledButtonJumbotronContainer>
+            </JumbotronContainer>
+          </StyledJumbotronTransparency>
         </StyledJumbotron>
 
-        <MobileConvertibleTabWindow
-          titles={['It\'s handled', 'It\'s better', 'It\'s something else']}
-          backgroundColors={[HoneyCoBlue, HoneyCoLightGray, 'white']}
-          textColors={['white', HoneyCoDarkGray, HoneyCoDarkGray]}
-        >
-          <Row>
-            <Col xs="12" sm="7">
-              <TabTextContentDiv>
-                <h2>Look after yourself and your home with HoneyCo</h2>
-                <p>Combine personal responsibility with home security. HoneyCo delivers the latest to show you can
-                    take care of yourself.</p>
-                <Button style={{ backgroundColor: HoneyCoYellow, display: 'block', margin: 'auto' }}>Take
-                    charge</Button>
-              </TabTextContentDiv>
-            </Col>
-            <Col xs="12" sm="5" style={{ textAlign: 'center' }}>
-              <img src={FirstTabImage} height="250" style={{ margin: '15px' }} alt="App Screenshot" />
-            </Col>
-          </Row>
-          <Row>
-            <Col xs="12">
-              <TabTextContentDiv>
-                <h2>Influence the future</h2>
-                <p>The long-term residential living options aren&apos;t great. Your participation creates a better
-                    option for everyone.</p>
-                <p>HoneyCo provides something different. Something that we think is better</p>
-                <Button style={{ backgroundColor: HoneyCoYellow, display: 'block', margin: 'auto' }}>See how</Button>
-              </TabTextContentDiv>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs="12" sm="7">
-              <TabTextContentDiv>
-                <h2>Beyond leisure</h2>
-                <p>unRetirement is personal. HoneyCo connects you to opportunities of engagement in a variety of
-                    areas.</p>
-                <Button style={{ backgroundColor: HoneyCoYellow, display: 'block', margin: 'auto' }}>Dive in</Button>
-              </TabTextContentDiv>
-            </Col>
-            <Col xs="12" sm="5" style={{ textAlign: 'center' }}>
-              <img src={ThirdTabImage} height="250" style={{ margin: '15px' }} alt="HoneyCo opportunities" />
-            </Col>
-          </Row>
-        </MobileConvertibleTabWindow>
-
-        <ColoredContainer backgroundColor={HoneyCoRed} textColor="white" divider={false}>
-          <Row>
-            <Col xs="12" sm="7">
-              <h2>A welcome addition to a tough conversation</h2>
-              <p>HoneyCo&apos;s JULIE alerts family members of home emergencies. Your loved ones are cared for.</p>
-              <Button style={{ backgroundColor: HoneyCoYellow, display: 'block', margin: 'auto' }}>Discover how</Button>
-            </Col>
-            <Col xs="12" sm="5" style={{ textAlign: 'center' }}>
-              <img src={SecondSectionImage} height="250" style={{ margin: '15px' }} alt="App Screenshot" />
-            </Col>
-          </Row>
-        </ColoredContainer>
-        <ColoredContainer backgroundColor={HoneyCoLightGray} textColor={HoneyCoDarkGray} divider={false}>
+        <MobileSolutions/>
+        <SmartHome/>
+          <ColoredContainer backgroundColor={HoneyCoLightGray} textColor={HoneyCoDarkGray} divider={false}>
           <h5 style={{ textAlign: 'center' }}>Featured On</h5>
           <FeaturedCards>
             <FeaturedCardWrapper>
@@ -214,6 +200,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         </ColoredContainer>
         <Footer />
       </div>
-    );
+    )
   }
 }

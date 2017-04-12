@@ -6,15 +6,15 @@
  * IntlProvider component and i18n messages (loaded from `app/translations`)
  */
 
-import React from 'react';
-import { IntlProvider } from 'react-intl';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React from 'react'
+import { IntlProvider } from 'react-intl'
+import { connect } from 'react-redux'
+import { createSelector } from 'reselect'
 
-import { makeSelectLocale } from './selectors';
+import { makeSelectLocale } from './selectors'
 
 export class LanguageProvider extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  render() {
+  render () {
     return (
       <IntlProvider
         locale={this.props.locale} key={this.props.locale}
@@ -22,7 +22,7 @@ export class LanguageProvider extends React.PureComponent { // eslint-disable-li
       >
         {React.Children.only(this.props.children)}
       </IntlProvider>
-    );
+    )
   }
 }
 
@@ -30,21 +30,21 @@ LanguageProvider.propTypes = {
   locale: React.PropTypes.string,
   messages: React.PropTypes.object.isRequired,
   children: React.PropTypes.element.isRequired,
-};
+}
 
 LanguageProvider.defaultProps = {
   locale: 'en',
-};
+}
 
 const mapStateToProps = createSelector(
   makeSelectLocale(),
   (locale) => ({ locale }),
-);
+)
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     dispatch,
-  };
+  }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LanguageProvider);
+export default connect(mapStateToProps, mapDispatchToProps)(LanguageProvider)

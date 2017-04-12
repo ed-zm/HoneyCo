@@ -4,12 +4,12 @@
  *
  */
 
-import React from 'react';
-import FontAwesome from 'react-fontawesome';
-import ReactPlayer from 'react-player';
-import { Button, Modal, ModalBody } from 'reactstrap';
-import styled from 'styled-components';
-import { HoneyCoDarkGray, HoneyCoYellow } from '../../constants';
+import React from 'react'
+import FontAwesome from 'react-fontawesome'
+import ReactPlayer from 'react-player'
+import { Button, Modal, ModalBody } from 'reactstrap'
+import styled from 'styled-components'
+import { HoneyCoDarkGray, HoneyCoYellow } from '../../constants'
 
 const StyledJumbotron = styled.div`
   background-image: url(${(props) => props.image});
@@ -19,7 +19,7 @@ const StyledJumbotron = styled.div`
   height: 0;
   padding-top: 56.2%; /* (img-height / img-width * 100) */
   position: relative;
-`;
+`
 
 const JumbotronContainer = styled.div`
   position: absolute;
@@ -28,46 +28,45 @@ const JumbotronContainer = styled.div`
   ${(props) => props.w === 'bottomRight' || props.w === 'topRight' ? 'right: 0;' : ''}
   ${(props) => props.w === 'bottomLeft' || props.w === 'topLeft' ? 'left: 0;' : ''}
   padding: 1rem;
-`;
+`
 
 const StyledCTAButton = styled(Button)`
   background-color: ${(props) => props.buttonBackgroundColor};
   border: none;
   color: ${(props) => props.buttonTextColor};
-`;
+`
 
 const ScalableModal = styled(Modal)`
   @media (min-width: 576px) {
     max-width: 90vw
   }
-`;
+`
 
 class VimeoJumbotron extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
+  constructor (props) {
+    super(props)
+    this.toggle = this.toggle.bind(this)
     this.state = {
       isPlaying: false,
-    };
+    }
   }
 
-  toggle() {
+  toggle () {
     this.setState({
       isPlaying: !this.state.isPlaying,
-    });
+    })
   }
 
-  render() {
-    const { image, buttonLocation, buttonBackgroundColor, buttonTextColor, buttonText, useModal } = this.props;
+  render () {
+    const { image, buttonLocation, buttonBackgroundColor, buttonTextColor, buttonText, useModal } = this.props
     if (this.state.isPlaying && !useModal) {
-      const vimeoConfig = {};
+      const vimeoConfig = {}
       return (
         <ReactPlayer
           playing url="https://vimeo.com/197954655" vimeoConfig={vimeoConfig} width="100vw"
           height="56.2vw" onEnded={this.toggle}
         />
-      );
+      )
     }
     return (
       <StyledJumbotron image={image}>
@@ -88,7 +87,7 @@ class VimeoJumbotron extends React.Component { // eslint-disable-line react/pref
           </ModalBody>
         </ScalableModal>
       </StyledJumbotron>
-    );
+    )
   }
 }
 
@@ -100,7 +99,7 @@ VimeoJumbotron.propTypes = {
   buttonTextColor: React.PropTypes.string,
   buttonBackgroundColor: React.PropTypes.string,
   useModal: React.PropTypes.bool,
-};
+}
 
 VimeoJumbotron.defaultProps = {
   buttonLocation: 'topLeft',
@@ -108,6 +107,6 @@ VimeoJumbotron.defaultProps = {
   buttonTextColor: HoneyCoDarkGray,
   buttonBackgroundColor: HoneyCoYellow,
   useModal: false,
-};
+}
 
-export default VimeoJumbotron;
+export default VimeoJumbotron

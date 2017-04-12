@@ -4,20 +4,20 @@
  *
  */
 
-import { fromJS } from 'immutable';
-import { BLOG_POST_FETCH_FAILED, BLOG_POST_FETCH_SUCCEEDED } from './constants';
+import { fromJS } from 'immutable'
+import { BLOG_POST_FETCH_FAILED, BLOG_POST_FETCH_SUCCEEDED } from './constants'
 
-const initialState = fromJS({});
+const initialState = fromJS({})
 
-function blogPostReducer(state = initialState, action) {
+function blogPostReducer (state = initialState, action) {
   switch (action.type) {
     case BLOG_POST_FETCH_SUCCEEDED:
-      return state;
+      return state
     case BLOG_POST_FETCH_FAILED:
-      return state;
+      return state
     default:
-      return state;
+      return state
   }
 }
 
-export default blogPostReducer;
+export default blogPostReducer

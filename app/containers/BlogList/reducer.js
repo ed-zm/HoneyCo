@@ -4,18 +4,18 @@
  *
  */
 
-import { fromJS } from 'immutable';
-import { DEFAULT_ACTION } from './constants';
+import { fromJS } from 'immutable'
+import { DEFAULT_ACTION } from './constants'
 
-const initialState = fromJS({});
+const initialState = fromJS({})
 
-function blogListReducer(state = initialState, action) {
+function blogListReducer (state = initialState, action) {
   switch (action.type) {
     case DEFAULT_ACTION:
-      return state;
+      return state
     default:
-      return state;
+      return state
   }
 }
 
-export default blogListReducer;
+export default blogListReducer
