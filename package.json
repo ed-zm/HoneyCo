@@ -253,7 +253,8 @@
     "sanitize.css": "^5.0.0",
     "styled-components": "1.4.4",
     "warning": "3.0.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "webpack": "2.3.2"
   },
   "devDependencies": {
     "babel-cli": "6.24.0",
