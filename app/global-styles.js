@@ -12,7 +12,7 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Oswald, Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     .btn {
       font-size: 1.25rem;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'reactstrap'
+import { Col, Row, Container } from 'reactstrap'
 import styled from 'styled-components'
 import { HoneyCoLightGray, HoneyCoDarkGray, HoneyCoYellow } from '../../constants'
 import Mobile1 from './static/mobile1.png'
@@ -28,6 +28,7 @@ const StyledRow = styled(Row)`
   color: ${HoneyCoDarkGray};
   padding: 1em;
   padding-bottom: 8em;
+  margin: 0px;
 `
 const StyledButton = styled.button`
   font-family: Oswald;
@@ -46,27 +47,31 @@ const StyledButtonContainer = styled.div`
 
 const MobileSolutions = () =>
     <StyledRow>
-      <StyledTitle>Diferent needs. One Solution.</StyledTitle>
-      <Col lg={4} md={4} sm ={6} xs={12} >
-        <StyledImage src = {Mobile1}/>
-        <StyledText>I want to stay in my home.</StyledText>
-        <StyledButtonContainer>
-          <StyledButton>Show me how</StyledButton>
-        </StyledButtonContainer>
-      </Col>
-      <Col lg={4} md={4} sm ={6} xs={12} >
-        <StyledImage src = {Mobile2}/>
-        <StyledText>I want peace of mind.</StyledText>
-        <StyledButtonContainer>
-          <StyledButton>Show me how</StyledButton>
-        </StyledButtonContainer>
-      </Col>
-      <Col lg={4} md={4} sm ={6} xs={12} >
-        <StyledImage src = {Mobile3}/>
-        <StyledText>I want to be different</StyledText>
-        <StyledButtonContainer>
-          <StyledButton>Show me how</StyledButton>
-        </StyledButtonContainer>
-      </Col>
+      <Container>
+        <Row>
+          <StyledTitle>Diferent needs. One Solution.</StyledTitle>
+          <Col xl = {4} lg={4} md={12} sm ={12} xs={12} >
+            <StyledImage src = {Mobile1}/>
+            <StyledText>I want to stay in my home.</StyledText>
+            <StyledButtonContainer>
+              <StyledButton>Show me how</StyledButton>
+            </StyledButtonContainer>
+          </Col>
+          <Col xl = {4} lg={4} md={12} sm ={12} xs={12} >
+            <StyledImage src = {Mobile2}/>
+            <StyledText>I want peace of mind.</StyledText>
+            <StyledButtonContainer>
+              <StyledButton>Show me how</StyledButton>
+            </StyledButtonContainer>
+          </Col>
+          <Col xl = {4} lg={4} md={12} sm ={12} xs={12} >
+            <StyledImage src = {Mobile3}/>
+            <StyledText>I want to be different</StyledText>
+            <StyledButtonContainer>
+              <StyledButton>Show me how</StyledButton>
+            </StyledButtonContainer>
+          </Col>
+        </Row>
+      </Container>
     </StyledRow>
 export default MobileSolutions

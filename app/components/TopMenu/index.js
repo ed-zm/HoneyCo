@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { Link } from 'react-router'
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
+import { Container, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
 import styled from 'styled-components'
 import { HoneyCoBlueRGBA, HoneyCoYellow } from '../../constants'
 
@@ -17,7 +17,7 @@ const StyledNavbar = styled(Navbar)`
   font-size: 26px;
   font-weight: bolder;
   position: fixed;
-  padding: 20px 30px;
+  padding: 10px 0px;
   top: 0;
   left: 0;
   z-index: 10;
@@ -26,9 +26,12 @@ const StyledNavbar = styled(Navbar)`
 `
 
 const StyledNavItem = styled(NavItem)`
-  padding: 0em .4em;
+  padding: 0em .2em;
   font-size: 26px;
   font-weight: lighter;
+  &:hover{
+    border-bottom: 5px solid white;
+  }
 `
 
 const StyledCollapse = styled(Collapse)`
@@ -81,21 +84,23 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
 
     return (
       <StyledNavbar toggleable = "md" opacity = {this.state.opacity} light>
-        <BiggerNavbarToggler right onClick={this.toggle} />
-        <NavbarBrand tag={Link} to="/">
-          <img src={HorizLogoLockup} width={215} height={46} alt="HoneyCo Homes" />
-        </NavbarBrand>
-        <StyledCollapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-2" navbar>
-            {
-              menuItems.map((item) =>
-                <StyledNavItem key={item.name}>
-                  <WhiteNavLink tag={Link} to={item.route} activeClassName="active">{item.name}</WhiteNavLink>
-                </StyledNavItem>,
-              )
-            }
-          </Nav>
-        </StyledCollapse>
+        <Container>
+          <BiggerNavbarToggler right onClick={this.toggle} />
+          <NavbarBrand tag={Link} to="/">
+            <img src={HorizLogoLockup} width={215} height={46} alt="HoneyCo Homes" />
+          </NavbarBrand>
+          <StyledCollapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-2" navbar>
+              {
+                menuItems.map((item) =>
+                  <StyledNavItem key={item.name}>
+                    <WhiteNavLink tag={Link} to={item.route} activeClassName="active">{item.name}</WhiteNavLink>
+                  </StyledNavItem>,
+                )
+              }
+            </Nav>
+          </StyledCollapse>
+        </Container>
       </StyledNavbar>
     )
   }
