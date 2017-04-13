@@ -66,6 +66,22 @@ export default function createRoutes (store) {
         importModules.catch(errorLoading)
       },
     }, {
+      path: '/how-it-works',
+      name: 'how-it-works',
+      getComponent (nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/HowItWorks'),
+        ])
+
+        const renderRoute = loadModule(cb)
+
+        importModules.then(([component]) => {
+          renderRoute(component)
+        })
+
+        importModules.catch(errorLoading)
+      },
+    }, {
       path: '/blog',
       name: 'blogList',
       getComponent (nextState, cb) {

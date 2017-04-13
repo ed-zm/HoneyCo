@@ -13,7 +13,7 @@ import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray, HoneyCoLightGray } fro
 import HorizLogoLockup from './static/logo-horiz-white@0.5x.png'
 
 const StyledNavbar = styled(Navbar)`
-  background-color: ${(props) => props.opacity ? HoneyCoBlueRGBA(0.5) : HoneyCoBlueRGBA(0)};
+  background-color: ${(props) => props.opacity ? HoneyCoBlueRGBA(0.7) : HoneyCoBlueRGBA(0)};
   font-size: 26px;
   font-weight: bolder;
   position: fixed;
