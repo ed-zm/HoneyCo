@@ -8,12 +8,12 @@ import React from 'react'
 import { Link } from 'react-router'
 import { Container, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
 import styled from 'styled-components'
-import { HoneyCoBlueRGBA, HoneyCoYellow } from '../../constants'
+import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
 
 import HorizLogoLockup from './static/logo-horiz-white@0.5x.png'
 
 const StyledNavbar = styled(Navbar)`
-  background-color: ${(props) => props.opacity ? HoneyCoBlueRGBA(1) : HoneyCoBlueRGBA(0)};
+  background-color: ${(props) => props.opacity ? HoneyCoBlueRGBA(0.5) : HoneyCoBlueRGBA(0)};
   font-size: 26px;
   font-weight: bolder;
   position: fixed;
@@ -26,11 +26,38 @@ const StyledNavbar = styled(Navbar)`
 `
 
 const StyledNavItem = styled(NavItem)`
+  position: relative;
   padding: 0em .2em;
   font-size: 26px;
   font-weight: lighter;
   &:hover{
     border-bottom: 5px solid white;
+  }
+`
+
+const StyledDropdown = styled.div`
+  left: 0;
+  bottom: 100;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  z-index: 12;
+  display: ${(props) => props.display};
+`
+const StyledDropdownList = styled.ul`
+  -webkit-padding-start: 0px;
+`
+
+const StyledDropdownItem = styled.li`
+  text-align: center;
+  padding: .5em;
+  font-size: 20px;
+  list-style: none;
+  color: ${HoneyCoDarkGray};
+  background-color: ${HoneyCoLightGray};
+  border: 2px solid ${HoneyCoDarkGray};
+  &:hover{
+    color: white;
   }
 `
 
@@ -52,15 +79,26 @@ const WhiteNavLink = styled(NavLink)`
   }
 `
 
+const StyledDropdownLink = styled(Link)`
+  color: ${HoneyCoDarkGray} !important;
+  &:hover, &:focus{
+    text-decoration: none;
+    color: white !important;
+  }
+  
+`
+
 class TopMenu extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor (props) {
     super(props)
 
     this.toggle = this.toggle.bind(this)
     this.changeBackground = this.changeBackground.bind(this)
+    this.handleHover = this.handleHover.bind(this)
     this.state = {
       isOpen: false,
       opacity: false,
+      dropdownHover: false,
     }
   }
   componentWillMount () {
@@ -78,9 +116,21 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
       this.setState({ opacity: false })
     }
   }
-
+  handleHover (e) {
+    this.setState({dropdownHover: !this.state.dropdownHover})
+  }
   render () {
     const { menuItems } = this.props
+    const dropdown = (listItems) =>
+      <StyledDropdown display = { this.state.dropdownHover ? 'block' : 'none'}>
+        <StyledDropdownList>
+          {listItems.map((listItem) =>
+            <StyledDropdownItem>
+              <StyledDropdownLink to = {listItem.route}>{listItem.name}</StyledDropdownLink>
+            </StyledDropdownItem>
+          )}
+        </StyledDropdownList>
+      </StyledDropdown>
 
     return (
       <StyledNavbar toggleable = "md" opacity = {this.state.opacity} light>
@@ -93,8 +143,11 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
             <Nav className="ml-2" navbar>
               {
                 menuItems.map((item) =>
-                  <StyledNavItem key={item.name}>
-                    <WhiteNavLink tag={Link} to={item.route} activeClassName="active">{item.name}</WhiteNavLink>
+                  <StyledNavItem key={item.name} onMouseEnter = {item.dropdown ? this.handleHover : ''} onMouseLeave = {item.dropdown ? this.handleHover : ''}>
+                    <WhiteNavLink tag={Link} to={item.route ? item.route : '#'} activeClassName="active">
+                      {item.name}
+                      {item.dropdown ? dropdown(item.dropdown) : ''}
+                    </WhiteNavLink>
                   </StyledNavItem>,
                 )
               }
@@ -113,11 +166,27 @@ TopMenu.propTypes = {
 
 TopMenu.defaultProps = {
   menuItems: [
-    { name: 'Who its for', route: '/who-its-for' },
-    { name: 'How it works', route: '/how-it-works' },
-    { name: 'Shop', route: '/shop' },
-    { name: 'Account', route: '/account' }],
-  ctaButton: { route: '/', name: 'I\'ve decided' },
+    {
+      name: 'Who its for',
+      route: false,
+      dropdown: [
+        {
+          name: 'Resident',
+          route: '/resident',
+        },
+        {
+          name: 'Caregiver',
+          route: '/caregiver',
+        },
+        {
+          name: 'Partnerships',
+          route: '/partnerships',
+        },
+      ],
+    },
+  { name: 'How it works', route: '/how-it-works', dropdown: false },
+  { name: 'Shop', route: '/shop' },
+  { name: 'Account', route: '/account', dropdown: false }],
 }
 
 export default TopMenu

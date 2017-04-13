@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HoneyCoBlueRGBA, HoneyCoYellow } from '../../constants'
-import JoelJumbotronImage from './static/home.jpg'
+import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray } from '../../constants'
 
 const StyledJumbotron = styled.div`
-  background-image: url(${JoelJumbotronImage});
-  background-size: auto;
+  background-image: url(${(props) => props.background});
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   bakground-color: ${HoneyCoBlueRGBA(0.5)};
@@ -17,46 +16,37 @@ const StyledJumbotronTransparency = styled.div`
   background-color: rgba(77, 162, 159, 0.6);
   width: 100%;
   height: 650px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const JumbotronContainer = styled.div`
-  position: absolute;
   padding: 1rem;
   color: white;
   text-weight: 700;
   
   // MAKE CHANGES BELOW TO PUT TEXT/BUTTONS ON TOP OF THE JUMBOTRON
-  top: 0;
-  left: 0;
   h1 {
     font-size: 1.5rem;
   }
   
   @media (min-width: 576px) {
-    top: 0;
-    left: 0;
     h1 {
       font-size: 1.5rem;
     }
   }
   @media (min-width: 768px) {
-    top: 40px;
-    left: 40px;
     h1 {
       font-size: 2rem;
     }
   }
   @media (min-width: 992px) {
-    top: 40px;
-    left: 100px;
     h1 {
       font-size: 2.5rem;
     }
   }
   @media (min-width: 1200px) {
-    top: calc(50% - 230.5px);
-    left: calc(50% - 307px);
     h1 {
       font-size: 4rem;
     }
@@ -90,6 +80,7 @@ const StyledSubTextJumbotron = styled.span`
 const StyledButtonJumbotron = styled.button`
   font-family: Oswald;
   font-size: 32px;
+  color: ${HoneyCoDarkGray};
   background-color: ${HoneyCoYellow};
   padding: .2em;
   border-radius: 5px;
@@ -103,16 +94,16 @@ const StyledButtonJumbotronContainer = styled.div`
   text-align: center;
 `
 
-const Header = () =>
-  <StyledJumbotron src={JoelJumbotronImage}>
+const Header = (props) =>
+  <StyledJumbotron background = {props.background}>
     <StyledJumbotronTransparency>
       <JumbotronContainer w="topLeft">
-        <StyledTextJumbotron>A smart decision for</StyledTextJumbotron>
-        <StyledTextJumbotron>independent living</StyledTextJumbotron>
-        <StyledSubTextJumbotron>Shaping the future of unRetirement</StyledSubTextJumbotron>
+        <StyledTextJumbotron>{props.headerText.firstText}</StyledTextJumbotron>
+        <StyledTextJumbotron>{props.headerText.secondText}</StyledTextJumbotron>
+        <StyledSubTextJumbotron>{props.headerText.subText}</StyledSubTextJumbotron>
         <StyledButtonJumbotronContainer>
           <StyledButtonJumbotron>
-            Meet HoneyCo
+            {props.headerText.button}
           </StyledButtonJumbotron>
         </StyledButtonJumbotronContainer>
       </JumbotronContainer>

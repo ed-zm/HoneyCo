@@ -34,6 +34,38 @@ export default function createRoutes (store) {
         importModules.catch(errorLoading)
       },
     }, {
+      path: '/resident',
+      name: 'resident',
+      getComponent (nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Resident'),
+        ])
+
+        const renderRoute = loadModule(cb)
+
+        importModules.then(([component]) => {
+          renderRoute(component)
+        })
+
+        importModules.catch(errorLoading)
+      },
+    }, {
+      path: '/caregiver',
+      name: 'caregiver',
+      getComponent (nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Caregiver'),
+        ])
+
+        const renderRoute = loadModule(cb)
+
+        importModules.then(([component]) => {
+          renderRoute(component)
+        })
+
+        importModules.catch(errorLoading)
+      },
+    }, {
       path: '/blog',
       name: 'blogList',
       getComponent (nextState, cb) {

@@ -18,12 +18,20 @@ import FeaturedOn from '../../components/FeaturedOn/index'
 import ColoredContainer from '../../components/ColoredContainer/index'
 import ContactUs from '../../components/ContactUs/index'
 import { HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
+import HomeBackground from './static/home-background.jpg'
+
+const headerText = {
+  firstText: 'A smart decision for',
+  secondText: 'independent living',
+  subText: 'Shaping the future of unRetirement.',
+  button: 'Meet HoneyCo',
+}
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render () {
     return (
       <div>
-        <Header/>
+        <Header background = {HomeBackground} headerText = {headerText}/>
         <MobileSolutions/>
         <SmartHome/>
         <HowItWorksButton/>
