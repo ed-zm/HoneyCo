@@ -7,7 +7,7 @@ import React from 'react'
 import styled from 'styled-components'
 import HoneyCoLogomark from './static/logomark-plain@0.5x.png'
 
-const HoneyCoDivider = styled.hr`
+const StyledDivider = styled.hr`
   border-top: 1px solid ${(props) => props.color};
   text-align: center;
   margin: 1.5rem 0;
@@ -25,8 +25,9 @@ const HoneyCoDivider = styled.hr`
     width: 30px;
     top: -15px;
     
-  }
-`
+  }`
+const HoneyCoDivider = (props) =>
+  <StyledDivider color = {props.color} backgroundColor = {props.backgroundColor} />
 
 HoneyCoDivider.propTypes = {
   backgroundColor: React.PropTypes.string.isRequired,

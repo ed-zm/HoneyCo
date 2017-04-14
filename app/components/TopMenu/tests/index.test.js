@@ -1,10 +1,10 @@
-// import React from 'react';
-// import { shallow } from 'enzyme';
-
-// import TopMenu from '../index';
+import React from 'react'
+import { shallow } from 'enzyme'
+import TopMenu from '../index'
 
 describe('<TopMenu />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false)
+  it('It should render the TopMenu Component', () => {
+    const wrapper = shallow(<TopMenu/>)
+    expect(wrapper).toMatchSnapshot()
   })
 })

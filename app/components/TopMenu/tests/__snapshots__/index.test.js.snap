@@ -1,0 +1,627 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopMenu /> It should render the TopMenu Component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Styled(jt)
+    light={true}
+    toggleable="md"
+>
+    <gt
+        tag="div"
+    >
+        <Styled(Wt)
+            onClick={[Function]}
+            right={true}
+        />
+        <St
+            tag={[Function]}
+            to="/"
+        >
+            <img
+                alt="HoneyCo Homes"
+                height={46}
+                src="IMAGE_MOCK"
+                width={215}
+            />
+        </St>
+        <Styled(ei)
+            isOpen={false}
+            navbar={true}
+        >
+            <Gt
+                className="ml-2"
+                navbar={true}
+                tag="ul"
+            >
+                <Styled($t)
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                >
+                    <Styled(ei)
+                        activeClassName="active"
+                        tag={[Function]}
+                        to="#"
+                    >
+                        Who its for
+                        <styled.div
+                            display="none"
+                        >
+                            <styled.ul>
+                                <styled.li>
+                                    <Styled(Link)
+                                        to="/resident"
+                                    >
+                                        Resident
+                                    </Styled(Link)>
+                                </styled.li>
+                                <styled.li>
+                                    <Styled(Link)
+                                        to="/caregiver"
+                                    >
+                                        Caregiver
+                                    </Styled(Link)>
+                                </styled.li>
+                                <styled.li>
+                                    <Styled(Link)
+                                        to="/partnerships"
+                                    >
+                                        Partnerships
+                                    </Styled(Link)>
+                                </styled.li>
+                            </styled.ul>
+                        </styled.div>
+                    </Styled(ei)>
+                </Styled($t)>
+                <Styled($t)
+                    onMouseEnter=""
+                    onMouseLeave=""
+                >
+                    <Styled(ei)
+                        activeClassName="active"
+                        tag={[Function]}
+                        to="/how-it-works"
+                    >
+                        How it works
+                        
+                    </Styled(ei)>
+                </Styled($t)>
+                <Styled($t)
+                    onMouseEnter=""
+                    onMouseLeave=""
+                >
+                    <Styled(ei)
+                        activeClassName="active"
+                        tag={[Function]}
+                        to="/shop"
+                    >
+                        Shop
+                        
+                    </Styled(ei)>
+                </Styled($t)>
+                <Styled($t)
+                    onMouseEnter=""
+                    onMouseLeave=""
+                >
+                    <Styled(ei)
+                        activeClassName="active"
+                        tag={[Function]}
+                        to="/account"
+                    >
+                        Account
+                        
+                    </Styled(ei)>
+                </Styled($t)>
+            </Gt>
+        </Styled(ei)>
+    </gt>
+</Styled(jt)>,
+  "nodes": Array [
+    <Styled(jt)
+      light={true}
+      toggleable="md"
+>
+      <gt
+            tag="div"
+      >
+            <Styled(Wt)
+                  onClick={[Function]}
+                  right={true}
+            />
+            <St
+                  tag={[Function]}
+                  to="/"
+            >
+                  <img
+                        alt="HoneyCo Homes"
+                        height={46}
+                        src="IMAGE_MOCK"
+                        width={215}
+                  />
+            </St>
+            <Styled(ei)
+                  isOpen={false}
+                  navbar={true}
+            >
+                  <Gt
+                        className="ml-2"
+                        navbar={true}
+                        tag="ul"
+                  >
+                        <Styled($t)
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                        >
+                              <Styled(ei)
+                                    activeClassName="active"
+                                    tag={[Function]}
+                                    to="#"
+                              >
+                                    Who its for
+                                    <styled.div
+                                          display="none"
+                                    >
+                                          <styled.ul>
+                                                <styled.li>
+                                                      <Styled(Link)
+                                                            to="/resident"
+                                                      >
+                                                            Resident
+                                                      </Styled(Link)>
+                                                </styled.li>
+                                                <styled.li>
+                                                      <Styled(Link)
+                                                            to="/caregiver"
+                                                      >
+                                                            Caregiver
+                                                      </Styled(Link)>
+                                                </styled.li>
+                                                <styled.li>
+                                                      <Styled(Link)
+                                                            to="/partnerships"
+                                                      >
+                                                            Partnerships
+                                                      </Styled(Link)>
+                                                </styled.li>
+                                          </styled.ul>
+                                    </styled.div>
+                              </Styled(ei)>
+                        </Styled($t)>
+                        <Styled($t)
+                              onMouseEnter=""
+                              onMouseLeave=""
+                        >
+                              <Styled(ei)
+                                    activeClassName="active"
+                                    tag={[Function]}
+                                    to="/how-it-works"
+                              >
+                                    How it works
+                                    
+                              </Styled(ei)>
+                        </Styled($t)>
+                        <Styled($t)
+                              onMouseEnter=""
+                              onMouseLeave=""
+                        >
+                              <Styled(ei)
+                                    activeClassName="active"
+                                    tag={[Function]}
+                                    to="/shop"
+                              >
+                                    Shop
+                                    
+                              </Styled(ei)>
+                        </Styled($t)>
+                        <Styled($t)
+                              onMouseEnter=""
+                              onMouseLeave=""
+                        >
+                              <Styled(ei)
+                                    activeClassName="active"
+                                    tag={[Function]}
+                                    to="/account"
+                              >
+                                    Account
+                                    
+                              </Styled(ei)>
+                        </Styled($t)>
+                  </Gt>
+            </Styled(ei)>
+      </gt>
+</Styled(jt)>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <TopMenu
+        menuItems={
+                Array [
+                        Object {
+                          "dropdown": Array [
+                            Object {
+                              "name": "Resident",
+                              "route": "/resident",
+                            },
+                            Object {
+                              "name": "Caregiver",
+                              "route": "/caregiver",
+                            },
+                            Object {
+                              "name": "Partnerships",
+                              "route": "/partnerships",
+                            },
+                          ],
+                          "name": "Who its for",
+                          "route": false,
+                        },
+                        Object {
+                          "dropdown": false,
+                          "name": "How it works",
+                          "route": "/how-it-works",
+                        },
+                        Object {
+                          "name": "Shop",
+                          "route": "/shop",
+                        },
+                        Object {
+                          "dropdown": false,
+                          "name": "Account",
+                          "route": "/account",
+                        },
+                      ]
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": TopMenu {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleHover": [Function],
+        "props": Object {
+          "menuItems": Array [
+            Object {
+              "dropdown": Array [
+                Object {
+                  "name": "Resident",
+                  "route": "/resident",
+                },
+                Object {
+                  "name": "Caregiver",
+                  "route": "/caregiver",
+                },
+                Object {
+                  "name": "Partnerships",
+                  "route": "/partnerships",
+                },
+              ],
+              "name": "Who its for",
+              "route": false,
+            },
+            Object {
+              "dropdown": false,
+              "name": "How it works",
+              "route": "/how-it-works",
+            },
+            Object {
+              "name": "Shop",
+              "route": "/shop",
+            },
+            Object {
+              "dropdown": false,
+              "name": "Account",
+              "route": "/account",
+            },
+          ],
+        },
+        "refs": Object {},
+        "state": Object {
+          "dropdownHover": false,
+          "isOpen": false,
+        },
+        "toggle": [Function],
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Styled(jt)
+          light={true}
+          toggleable="md"
+>
+          <gt
+                    tag="div"
+          >
+                    <Styled(Wt)
+                              onClick={[Function]}
+                              right={true}
+                    />
+                    <St
+                              tag={[Function]}
+                              to="/"
+                    >
+                              <img
+                                        alt="HoneyCo Homes"
+                                        height={46}
+                                        src="IMAGE_MOCK"
+                                        width={215}
+                              />
+                    </St>
+                    <Styled(ei)
+                              isOpen={false}
+                              navbar={true}
+                    >
+                              <Gt
+                                        className="ml-2"
+                                        navbar={true}
+                                        tag="ul"
+                              >
+                                        <Styled($t)
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="#"
+                                                  >
+                                                            Who its for
+                                                            <styled.div
+                                                                      display="none"
+                                                            >
+                                                                      <styled.ul>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/resident"
+                                                                                          >
+                                                                                                    Resident
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/caregiver"
+                                                                                          >
+                                                                                                    Caregiver
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/partnerships"
+                                                                                          >
+                                                                                                    Partnerships
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                      </styled.ul>
+                                                            </styled.div>
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/how-it-works"
+                                                  >
+                                                            How it works
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/shop"
+                                                  >
+                                                            Shop
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/account"
+                                                  >
+                                                            Account
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                              </Gt>
+                    </Styled(ei)>
+          </gt>
+</Styled(jt)>,
+        "_debugID": 2,
+        "_renderedOutput": <Styled(jt)
+          light={true}
+          toggleable="md"
+>
+          <gt
+                    tag="div"
+          >
+                    <Styled(Wt)
+                              onClick={[Function]}
+                              right={true}
+                    />
+                    <St
+                              tag={[Function]}
+                              to="/"
+                    >
+                              <img
+                                        alt="HoneyCo Homes"
+                                        height={46}
+                                        src="IMAGE_MOCK"
+                                        width={215}
+                              />
+                    </St>
+                    <Styled(ei)
+                              isOpen={false}
+                              navbar={true}
+                    >
+                              <Gt
+                                        className="ml-2"
+                                        navbar={true}
+                                        tag="ul"
+                              >
+                                        <Styled($t)
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="#"
+                                                  >
+                                                            Who its for
+                                                            <styled.div
+                                                                      display="none"
+                                                            >
+                                                                      <styled.ul>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/resident"
+                                                                                          >
+                                                                                                    Resident
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/caregiver"
+                                                                                          >
+                                                                                                    Caregiver
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                                <styled.li>
+                                                                                          <Styled(Link)
+                                                                                                    to="/partnerships"
+                                                                                          >
+                                                                                                    Partnerships
+                                                                                          </Styled(Link)>
+                                                                                </styled.li>
+                                                                      </styled.ul>
+                                                            </styled.div>
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/how-it-works"
+                                                  >
+                                                            How it works
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/shop"
+                                                  >
+                                                            Shop
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                                        <Styled($t)
+                                                  onMouseEnter=""
+                                                  onMouseLeave=""
+                                        >
+                                                  <Styled(ei)
+                                                            activeClassName="active"
+                                                            tag={[Function]}
+                                                            to="/account"
+                                                  >
+                                                            Account
+                                                            
+                                                  </Styled(ei)>
+                                        </Styled($t)>
+                              </Gt>
+                    </Styled(ei)>
+          </gt>
+</Styled(jt)>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <TopMenu
+    menuItems={
+        Array [
+            Object {
+              "dropdown": Array [
+                Object {
+                  "name": "Resident",
+                  "route": "/resident",
+                },
+                Object {
+                  "name": "Caregiver",
+                  "route": "/caregiver",
+                },
+                Object {
+                  "name": "Partnerships",
+                  "route": "/partnerships",
+                },
+              ],
+              "name": "Who its for",
+              "route": false,
+            },
+            Object {
+              "dropdown": false,
+              "name": "How it works",
+              "route": "/how-it-works",
+            },
+            Object {
+              "name": "Shop",
+              "route": "/shop",
+            },
+            Object {
+              "dropdown": false,
+              "name": "Account",
+              "route": "/account",
+            },
+          ]
+    }
+/>,
+}
+`;

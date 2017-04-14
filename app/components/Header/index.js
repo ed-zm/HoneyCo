@@ -11,11 +11,13 @@ const StyledJumbotron = styled.div`
   width: 100%;
   height: 650px;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 `
 const StyledJumbotronTransparency = styled.div`
   background-color: rgba(77, 162, 159, 0.7);
   width: 100%;
-  height: 650px;
+  height: 565px;
   display: flex;
   align-items: center;
   justify-content: center;

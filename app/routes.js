@@ -82,46 +82,6 @@ export default function createRoutes (store) {
         importModules.catch(errorLoading)
       },
     }, {
-      path: '/blog',
-      name: 'blogList',
-      getComponent (nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/BlogList/reducer'),
-          import('containers/BlogList/sagas'),
-          import('containers/BlogList'),
-        ])
-
-        const renderRoute = loadModule(cb)
-
-        importModules.then(([reducer, sagas, component]) => {
-          injectReducer('blogList', reducer.default)
-          injectSagas(sagas.default)
-          renderRoute(component)
-        })
-
-        importModules.catch(errorLoading)
-      },
-    }, {
-      path: '/blog/:slug',
-      name: 'blogPost',
-      getComponent (nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/BlogPost/reducer'),
-          import('containers/BlogPost/sagas'),
-          import('containers/BlogPost'),
-        ])
-
-        const renderRoute = loadModule(cb)
-
-        importModules.then(([reducer, sagas, component]) => {
-          injectReducer('blogPost', reducer.default)
-          injectSagas(sagas.default)
-          renderRoute(component)
-        })
-
-        importModules.catch(errorLoading)
-      },
-    }, {
       path: '*',
       name: 'notfound',
       getComponent (nextState, cb) {

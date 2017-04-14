@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> should render HomePage Component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <Header
+        background="IMAGE_MOCK"
+        headerText={
+            Object {
+                "button": "Meet HoneyCo",
+                "firstText": "A smart decision for",
+                "secondText": "independent living",
+                "subText": "Shaping the future of unRetirement.",
+              }
+        }
+    />
+    <MobileSolutions />
+    <SmartHome />
+    <HowItWorksButton />
+    <ColoredContainer
+        backgroundColor="#e4e4e4"
+        divider={false}
+        textColor="#5e5e5e"
+        title=""
+    >
+        <h5
+            style={
+                Object {
+                    "textAlign": "center",
+                  }
+            }
+        >
+            Featured On
+        </h5>
+        <FeaturedOn />
+    </ColoredContainer>
+    <ContactUs />
+</div>,
+  "nodes": Array [
+    <div>
+      <Header
+            background="IMAGE_MOCK"
+            headerText={
+                  Object {
+                        "button": "Meet HoneyCo",
+                        "firstText": "A smart decision for",
+                        "secondText": "independent living",
+                        "subText": "Shaping the future of unRetirement.",
+                      }
+            }
+      />
+      <MobileSolutions />
+      <SmartHome />
+      <HowItWorksButton />
+      <ColoredContainer
+            backgroundColor="#e4e4e4"
+            divider={false}
+            textColor="#5e5e5e"
+            title=""
+      >
+            <h5
+                  style={
+                        Object {
+                              "textAlign": "center",
+                            }
+                  }
+            >
+                  Featured On
+            </h5>
+            <FeaturedOn />
+      </ColoredContainer>
+      <ContactUs />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 1,
+      "_context": Object {},
+      "_currentElement": <HomePage />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": HomePage {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <Header
+                    background="IMAGE_MOCK"
+                    headerText={
+                              Object {
+                                        "button": "Meet HoneyCo",
+                                        "firstText": "A smart decision for",
+                                        "secondText": "independent living",
+                                        "subText": "Shaping the future of unRetirement.",
+                                      }
+                    }
+          />
+          <MobileSolutions />
+          <SmartHome />
+          <HowItWorksButton />
+          <ColoredContainer
+                    backgroundColor="#e4e4e4"
+                    divider={false}
+                    textColor="#5e5e5e"
+                    title=""
+          >
+                    <h5
+                              style={
+                                        Object {
+                                                  "textAlign": "center",
+                                                }
+                              }
+                    >
+                              Featured On
+                    </h5>
+                    <FeaturedOn />
+          </ColoredContainer>
+          <ContactUs />
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <Header
+                    background="IMAGE_MOCK"
+                    headerText={
+                              Object {
+                                        "button": "Meet HoneyCo",
+                                        "firstText": "A smart decision for",
+                                        "secondText": "independent living",
+                                        "subText": "Shaping the future of unRetirement.",
+                                      }
+                    }
+          />
+          <MobileSolutions />
+          <SmartHome />
+          <HowItWorksButton />
+          <ColoredContainer
+                    backgroundColor="#e4e4e4"
+                    divider={false}
+                    textColor="#5e5e5e"
+                    title=""
+          >
+                    <h5
+                              style={
+                                        Object {
+                                                  "textAlign": "center",
+                                                }
+                              }
+                    >
+                              Featured On
+                    </h5>
+                    <FeaturedOn />
+          </ColoredContainer>
+          <ContactUs />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <HomePage />,
+}
+`;

@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Caregiver /> It should render the Caregiver Component 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Styled(bt)>
+    <Header
+        background="IMAGE_MOCK"
+        headerText={
+            Object {
+                "button": "Show me more",
+                "firstText": "Confidence in their",
+                "secondText": "decision to stay at home.",
+                "subText": "A way street to unRetirement.",
+              }
+        }
+    />
+    <ResidentBox
+        background={true}
+        color={false}
+        image="IMAGE_MOCK"
+        text={false}
+    />
+    <ResidentBox
+        background={false}
+        color={true}
+        text={
+            Object {
+                "button": "Is HoneyCo the solution for you?",
+                "firstParagraph": "You know what it's like to worry about the health and safety of those you care about most.",
+                "secondParagraph": "HoneyCo will notify you any unusual activity in the home. The result is peace of mind and faster response time if an emergency arises",
+                "title": "They're where they want to be, now you can too.",
+              }
+        }
+        textColor="#bf4931"
+    />
+    <ResidentBox
+        background={false}
+        color={true}
+        text={
+            Object {
+                "button": "See how it works",
+                "firstParagraph": "With HoneyCo, know when things are just fine and when they are not, assuring your loved ones that when they are alone they are never isolated",
+                "title": "Know more, worry less.",
+              }
+        }
+        textColor="#bf4931"
+    />
+    <ResidentBox
+        background={true}
+        color={false}
+        image="IMAGE_MOCK"
+        text={false}
+    />
+    <ResidentBox
+        background={true}
+        color={false}
+        image="IMAGE_MOCK"
+        text={false}
+    />
+    <ResidentBox
+        background={false}
+        color={true}
+        text={
+            Object {
+                "button": "Purchase",
+                "firstParagraph": "HoneyCo lets you know that your loved ones are healthly andhappy when you are not there, so you can enjoy your time together more when you are.",
+                "title": "Conversations that really connect",
+              }
+        }
+        textColor="#bf4931"
+    />
+</Styled(bt)>,
+  "nodes": Array [
+    <Styled(bt)>
+      <Header
+            background="IMAGE_MOCK"
+            headerText={
+                  Object {
+                        "button": "Show me more",
+                        "firstText": "Confidence in their",
+                        "secondText": "decision to stay at home.",
+                        "subText": "A way street to unRetirement.",
+                      }
+            }
+      />
+      <ResidentBox
+            background={true}
+            color={false}
+            image="IMAGE_MOCK"
+            text={false}
+      />
+      <ResidentBox
+            background={false}
+            color={true}
+            text={
+                  Object {
+                        "button": "Is HoneyCo the solution for you?",
+                        "firstParagraph": "You know what it's like to worry about the health and safety of those you care about most.",
+                        "secondParagraph": "HoneyCo will notify you any unusual activity in the home. The result is peace of mind and faster response time if an emergency arises",
+                        "title": "They're where they want to be, now you can too.",
+                      }
+            }
+            textColor="#bf4931"
+      />
+      <ResidentBox
+            background={false}
+            color={true}
+            text={
+                  Object {
+                        "button": "See how it works",
+                        "firstParagraph": "With HoneyCo, know when things are just fine and when they are not, assuring your loved ones that when they are alone they are never isolated",
+                        "title": "Know more, worry less.",
+                      }
+            }
+            textColor="#bf4931"
+      />
+      <ResidentBox
+            background={true}
+            color={false}
+            image="IMAGE_MOCK"
+            text={false}
+      />
+      <ResidentBox
+            background={true}
+            color={false}
+            image="IMAGE_MOCK"
+            text={false}
+      />
+      <ResidentBox
+            background={false}
+            color={true}
+            text={
+                  Object {
+                        "button": "Purchase",
+                        "firstParagraph": "HoneyCo lets you know that your loved ones are healthly andhappy when you are not there, so you can enjoy your time together more when you are.",
+                        "title": "Conversations that really connect",
+                      }
+            }
+            textColor="#bf4931"
+      />
+</Styled(bt)>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Resident />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Styled(bt)>
+          <Header
+                    background="IMAGE_MOCK"
+                    headerText={
+                              Object {
+                                        "button": "Show me more",
+                                        "firstText": "Confidence in their",
+                                        "secondText": "decision to stay at home.",
+                                        "subText": "A way street to unRetirement.",
+                                      }
+                    }
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "Is HoneyCo the solution for you?",
+                                        "firstParagraph": "You know what it's like to worry about the health and safety of those you care about most.",
+                                        "secondParagraph": "HoneyCo will notify you any unusual activity in the home. The result is peace of mind and faster response time if an emergency arises",
+                                        "title": "They're where they want to be, now you can too.",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "See how it works",
+                                        "firstParagraph": "With HoneyCo, know when things are just fine and when they are not, assuring your loved ones that when they are alone they are never isolated",
+                                        "title": "Know more, worry less.",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "Purchase",
+                                        "firstParagraph": "HoneyCo lets you know that your loved ones are healthly andhappy when you are not there, so you can enjoy your time together more when you are.",
+                                        "title": "Conversations that really connect",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+</Styled(bt)>,
+        "_debugID": 2,
+        "_renderedOutput": <Styled(bt)>
+          <Header
+                    background="IMAGE_MOCK"
+                    headerText={
+                              Object {
+                                        "button": "Show me more",
+                                        "firstText": "Confidence in their",
+                                        "secondText": "decision to stay at home.",
+                                        "subText": "A way street to unRetirement.",
+                                      }
+                    }
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "Is HoneyCo the solution for you?",
+                                        "firstParagraph": "You know what it's like to worry about the health and safety of those you care about most.",
+                                        "secondParagraph": "HoneyCo will notify you any unusual activity in the home. The result is peace of mind and faster response time if an emergency arises",
+                                        "title": "They're where they want to be, now you can too.",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "See how it works",
+                                        "firstParagraph": "With HoneyCo, know when things are just fine and when they are not, assuring your loved ones that when they are alone they are never isolated",
+                                        "title": "Know more, worry less.",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={true}
+                    color={false}
+                    image="IMAGE_MOCK"
+                    text={false}
+          />
+          <ResidentBox
+                    background={false}
+                    color={true}
+                    text={
+                              Object {
+                                        "button": "Purchase",
+                                        "firstParagraph": "HoneyCo lets you know that your loved ones are healthly andhappy when you are not there, so you can enjoy your time together more when you are.",
+                                        "title": "Conversations that really connect",
+                                      }
+                    }
+                    textColor="#bf4931"
+          />
+</Styled(bt)>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Resident />,
+}
+`;

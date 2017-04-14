@@ -4,16 +4,16 @@
  *
  */
 
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
 import { Container, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
 import styled from 'styled-components'
 import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
-
 import HorizLogoLockup from './static/logo-horiz-white@0.5x.png'
 
 const StyledNavbar = styled(Navbar)`
-  background-color: ${(props) => props.opacity ? HoneyCoBlueRGBA(0.7) : HoneyCoBlueRGBA(0)};
+  background-color: ${(props) => HoneyCoBlueRGBA(0.7)};
   font-size: 26px;
   font-weight: bolder;
   position: fixed;
@@ -31,6 +31,7 @@ const StyledNavItem = styled(NavItem)`
   font-size: 26px;
   font-weight: lighter;
   &:hover{
+    margin-bottom: -5px;
     border-bottom: 5px solid white;
   }
 `
@@ -93,28 +94,16 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
     super(props)
 
     this.toggle = this.toggle.bind(this)
-    this.changeBackground = this.changeBackground.bind(this)
     this.handleHover = this.handleHover.bind(this)
     this.state = {
       isOpen: false,
-      opacity: false,
       dropdownHover: false,
     }
-  }
-  componentWillMount () {
-    window.addEventListener('scroll', this.changeBackground)
   }
   toggle () {
     this.setState({
       isOpen: !this.state.isOpen,
     })
-  }
-  changeBackground () {
-    if (window.scrollY !== 0) {
-      this.setState({ opacity: true })
-    } else {
-      this.setState({ opacity: false })
-    }
   }
   handleHover (e) {
     this.setState({dropdownHover: !this.state.dropdownHover})
@@ -133,7 +122,7 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
       </StyledDropdown>
 
     return (
-      <StyledNavbar toggleable = "md" opacity = {this.state.opacity} light>
+      <StyledNavbar toggleable = "md" light>
         <Container>
           <BiggerNavbarToggler right onClick={this.toggle} />
           <NavbarBrand tag={Link} to="/">
@@ -161,7 +150,7 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
 
 TopMenu.propTypes = {
   menuItems: React.PropTypes.array,
-  ctaButton: React.PropTypes.object,
+  dispatch: PropTypes.func.isRequired,
 }
 
 TopMenu.defaultProps = {

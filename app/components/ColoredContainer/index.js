@@ -20,17 +20,15 @@ const PrettyHeader = styled.h1`
   text-align: center;
 `
 
-class ColoredContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  render () {
-    const { backgroundColor, textColor, title, divider, children } = this.props
-    return (
-      <StyledContainer fluid backgroundColor={backgroundColor} textColor={textColor} title={title} divider={divider}>
-        {title ? <PrettyHeader>{title}</PrettyHeader> : ''}
-        {divider ? <HoneyCoDivider color={textColor} backgroundColor={backgroundColor} /> : ''}
-        {children}
-      </StyledContainer>
-    )
-  }
+const ColoredContainer = (props) => {
+  const { backgroundColor, textColor, title, divider, children } = props
+  return (
+    <StyledContainer fluid backgroundColor={backgroundColor} textColor={textColor} title={title} divider={divider}>
+      {title ? <PrettyHeader>{title}</PrettyHeader> : ''}
+      {divider ? <HoneyCoDivider color={textColor} backgroundColor={backgroundColor} /> : ''}
+      {children}
+    </StyledContainer>
+  )
 }
 
 ColoredContainer.propTypes = {

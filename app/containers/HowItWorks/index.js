@@ -1,9 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import HowItWorksSection from '../../components/HowItWorksSection/index'
 import WhatIsUnretirement from '../../components/WhatIsUnretirement/index'
 import text from './texts'
 import Background from './static/background.jpg'
 import Image1 from './static/image1.png'
+
 const HowItWorks = () =>
   <div>
     <HowItWorksSection text = {text.howItWorks} background = {Image1}/>

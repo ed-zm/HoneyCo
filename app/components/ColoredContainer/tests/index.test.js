@@ -1,10 +1,10 @@
-// import React from 'react';
-// import { shallow } from 'enzyme';
-
-// import ColoredContainer from '../index';
+import React from 'react'
+import { shallow } from 'enzyme'
+import ColoredContainer from '../index'
 
 describe('<ColoredContainer />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false)
+  it('It should render the ColoredContainer Component', () => {
+    const wrapper = shallow(<ColoredContainer/>)
+    expect(wrapper).toMatchSnapshot()
   })
 })

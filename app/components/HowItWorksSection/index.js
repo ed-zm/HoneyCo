@@ -4,14 +4,14 @@ import { Container } from 'reactstrap'
 import { HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
 
 const StyledContainer = styled(Container)`
-  padding-top: 70px;
+  padding-top: 100px;
 `
 
 const StyledBackground = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-flow: row wrap;
 `
 
@@ -49,7 +49,7 @@ const StyledTitle = styled.span`
 const StyledBoxTitle = styled.span`
   font-size: 32px;
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 `
 const StyledBoxDescription = styled.span`
   font-size: 20px;
