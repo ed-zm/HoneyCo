@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import HowItWorksSection from '../../components/HowItWorksSection/index'
 import WhatIsUnretirement from '../../components/WhatIsUnretirement/index'
 import text from './texts'

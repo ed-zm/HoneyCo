@@ -4,9 +4,9 @@
  *
  */
 
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router'
-import { connect } from 'react-redux'
 import { Container, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
 import styled from 'styled-components'
 import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
@@ -113,8 +113,8 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
     const dropdown = (listItems) =>
       <StyledDropdown display = { this.state.dropdownHover ? 'block' : 'none'}>
         <StyledDropdownList>
-          {listItems.map((listItem) =>
-            <StyledDropdownItem>
+          {listItems.map((listItem, i) =>
+            <StyledDropdownItem key = {i}>
               <StyledDropdownLink to = {listItem.route}>{listItem.name}</StyledDropdownLink>
             </StyledDropdownItem>
           )}
@@ -149,8 +149,7 @@ class TopMenu extends React.Component { // eslint-disable-line react/prefer-stat
 }
 
 TopMenu.propTypes = {
-  menuItems: React.PropTypes.array,
-  dispatch: PropTypes.func.isRequired,
+  menuItems: PropTypes.array,
 }
 
 TopMenu.defaultProps = {

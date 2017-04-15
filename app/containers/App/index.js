@@ -14,11 +14,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.min.css'
 import React from 'react'
+import PropTypes from 'prop-types'
 import TopMenu from '../../components/TopMenu/index'
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
-    children: React.PropTypes.node,
+    children: PropTypes.node,
   }
   static defaultProps = {
     children: [],

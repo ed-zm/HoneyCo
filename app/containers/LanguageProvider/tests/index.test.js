@@ -3,7 +3,6 @@ import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { Provider } from 'react-redux'
 import { browserHistory } from 'react-router'
-
 import { translationMessages } from '../../../i18n'
 import configureStore from '../../../store'
 

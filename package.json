@@ -115,7 +115,11 @@
         2,
         "always-multiline"
       ],
-      "quotes": [1, "single", "avoid-escape"],
+      "quotes": [
+        1,
+        "single",
+        "avoid-escape"
+      ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -231,6 +235,7 @@
     "less": "^2.7.2",
     "lodash": "^4.17.4",
     "minimist": "1.2.0",
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",

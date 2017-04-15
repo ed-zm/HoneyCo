@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Col } from 'reactstrap'
 import styled from 'styled-components'
 import { HoneyCoLightGray, HoneyCoDarkGray, HoneyCoYellow } from '../../constants'
@@ -43,29 +44,33 @@ const StyledList = styled.span`
 `
 
 const ResidentBox = (props) =>
-    <StyledCol xl={6} lg={6} md={12} sm={12} xs={12} background={props.background ? props.image : HoneyCoLightGray} color={props.color ? HoneyCoLightGray : ''}>
-      <StyledTitleText textColor={props.textColor}>
-        {props.text ? props.text.title : ''}
-      </StyledTitleText>
-      <StyledParagraph>
-        {props.text ? props.text.firstParagraph : ''}
-      </StyledParagraph>
-      <StyledParagraph>
-        {props.text ? props.text.secondParagraph : ''}
-      </StyledParagraph>
-      <StyledParagraph>
-        {props.text ? props.text.thirdParagraph : ''}
-      </StyledParagraph>
-      <StyledParagraph>
-        {props.text.list ? props.text.list.map((item) =>
-          <StyledList>- {item}</StyledList>
-        )
-        : ''
-        }
-      </StyledParagraph>
-      {props.text
-      ? <StyledButton>{props.text.button}</StyledButton>
+  <StyledCol xl={6} lg={6} md={12} sm={12} xs={12} background={props.background ? props.image : HoneyCoLightGray} color={props.color ? HoneyCoLightGray : ''}>
+    <StyledTitleText textColor={props.textColor}>
+      {props.text ? props.text.title : ''}
+    </StyledTitleText>
+    <StyledParagraph>
+      {props.text ? props.text.firstParagraph : ''}
+    </StyledParagraph>
+    <StyledParagraph>
+      {props.text ? props.text.secondParagraph : ''}
+    </StyledParagraph>
+    <StyledParagraph>
+      {props.text ? props.text.thirdParagraph : ''}
+    </StyledParagraph>
+    <StyledParagraph>
+      {props.text.list ? props.text.list.map((item) =>
+        <StyledList>- {item}</StyledList>
+      )
       : ''
       }
-    </StyledCol>
+    </StyledParagraph>
+    {props.text
+    ? <StyledButton>{props.text.button}</StyledButton>
+    : ''
+    }
+  </StyledCol>
+
+ResidentBox.propTypes = {
+  text: PropTypes.object.isRequired,
+}
 export default ResidentBox

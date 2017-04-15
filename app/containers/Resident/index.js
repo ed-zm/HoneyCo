@@ -31,4 +31,5 @@ const Resident = () =>
     <ResidentBox color = {false} background={true} text={false} image={Image3}/>
     <ResidentBox color = {true} background={false} text={text.textThree} textColor={HoneyCoBlue}/>
   </StyledRow>
+
 export default Resident

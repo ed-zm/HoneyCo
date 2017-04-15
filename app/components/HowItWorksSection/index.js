@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Container } from 'reactstrap'
 import { HoneyCoDarkGray, HoneyCoLightGray } from '../../constants'
@@ -83,4 +84,8 @@ const HowItWorksSection = (props) =>
     </StyledBoxContainer>
   </StyledBackground>
 </StyledContainer>
+
+HowItWorksSection.propTypes = {
+  text: PropTypes.object.isRequired,
+}
 export default HowItWorksSection

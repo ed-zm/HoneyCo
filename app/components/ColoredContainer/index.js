@@ -5,6 +5,7 @@
  */
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Container } from 'reactstrap'
 import styled from 'styled-components'
 import HoneyCoDivider from '../HoneyCoDivider/index'
@@ -32,11 +33,11 @@ const ColoredContainer = (props) => {
 }
 
 ColoredContainer.propTypes = {
-  backgroundColor: React.PropTypes.string.isRequired,
-  textColor: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node,
-  title: React.PropTypes.string,
-  divider: React.PropTypes.bool,
+  backgroundColor: PropTypes.string.isRequired,
+  textColor: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  title: PropTypes.string,
+  divider: PropTypes.bool,
 }
 
 ColoredContainer.defaultProps = {

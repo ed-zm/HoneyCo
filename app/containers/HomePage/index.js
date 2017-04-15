@@ -27,20 +27,17 @@ const headerText = {
   button: 'Meet HoneyCo',
 }
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  render () {
-    return (
-      <div>
-        <Header background = {HomeBackground} headerText = {headerText}/>
-        <MobileSolutions/>
-        <SmartHome/>
-        <HowItWorksButton/>
-          <ColoredContainer backgroundColor={HoneyCoLightGray} textColor={HoneyCoDarkGray} divider={false}>
-          <h5 style={{ textAlign: 'center' }}>Featured On</h5>
-          <FeaturedOn/>
-        </ColoredContainer>
-        <ContactUs/>
-      </div>
-    )
-  }
-}
+const HomePage = () =>
+  <div>
+    <Header background = {HomeBackground} headerText = {headerText}/>
+    <MobileSolutions/>
+    <SmartHome/>
+    <HowItWorksButton/>
+      <ColoredContainer backgroundColor={HoneyCoLightGray} textColor={HoneyCoDarkGray} divider={false}>
+      <h5 style={{ textAlign: 'center' }}>Featured On</h5>
+      <FeaturedOn/>
+    </ColoredContainer>
+    <ContactUs/>
+  </div>
+
+export default HomePage

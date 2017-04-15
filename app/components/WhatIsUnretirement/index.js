@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Container } from 'reactstrap'
 import { HoneyCoBlueRGBA, HoneyCoRed, HoneyCoDarkGray, HoneyCoYellow } from '../../constants'
@@ -60,4 +61,7 @@ const WhatIsUnretirement = (props) =>
     </StyledContainerTransparency>
   </StyledContainer>
 
+WhatIsUnretirement.propTypes = {
+  text: PropTypes.object.isRequired,
+}
 export default WhatIsUnretirement

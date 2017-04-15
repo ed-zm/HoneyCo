@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { HoneyCoBlueRGBA, HoneyCoYellow, HoneyCoDarkGray } from '../../constants'
 
@@ -112,5 +113,10 @@ const Header = (props) =>
       </JumbotronContainer>
     </StyledJumbotronTransparency>
   </StyledJumbotron>
+
+Header.propTypes = {
+  background: PropTypes.string.isRequired,
+  headerText: PropTypes.object.isRequired,
+}
 
 export default Header

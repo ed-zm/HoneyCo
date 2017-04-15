@@ -4,6 +4,7 @@
  *
  */
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import HoneyCoLogomark from './static/logomark-plain@0.5x.png'
 
@@ -30,8 +31,8 @@ const HoneyCoDivider = (props) =>
   <StyledDivider color = {props.color} backgroundColor = {props.backgroundColor} />
 
 HoneyCoDivider.propTypes = {
-  backgroundColor: React.PropTypes.string.isRequired,
-  color: React.PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 }
 
 export default HoneyCoDivider
